@@ -13,9 +13,11 @@
     <tr><td height="10" style="font-size:0; line-height:0;">&nbsp;</td></tr>
 
     <!-- Encabezado -->
-	<tr>
+    <tr>
       <td bgcolor="#28a745" align="center" style="padding:10px 0;">
-        <font face="Arial, sans-serif" size="5" color="#ffffff"><b>&#9888;&#65039; ZABBIX EVENT RESOLVED &#9888;&#65039;</b></font>
+        <span style="font-size:20px; color:#ffffff; line-height:24px; mso-line-height-rule:exactly;">
+          <b>&#9888;&#65039; ZABBIX EVENT RESOLVED &#9888;&#65039;</b>
+        </span>
       </td>
     </tr>
 
