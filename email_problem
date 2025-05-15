@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Zabbix Monitoring</title>
+</head>
+<body style="margin:0; padding:0; font-family: Arial, Helvetica, sans-serif;">
+
+  <div style="border: 3px solid LightGray; max-width: 700px; margin: auto; padding: 20px; text-align: center;">
+
+    <!-- Encabezado -->
+    <div style="background-color:Tomato; padding: 10px;">
+      <h1 style="color: white; margin: 0;">&#9888;&#65039; ZABBIX EVENT &#9888;&#65039;</h1>
+    </div>
+
+    <!-- Información del host -->
+    <div style="background-color:LightGray; padding: 5px; margin-top: 10px;">
+      <h4 style="margin: 0;">HOST INFORMATION</h4>
+    </div>
+    <table style="width: 100%; border-collapse: collapse; margin-top: 10px; text-align: left;">
+      <tr><td style="padding: 4px;">&#128256; Proxy:</td>       <td style="padding: 4px;">{PROXY.NAME}</td></tr>
+      <tr><td style="padding: 4px;">&#127991;&#65039; Name:</td> <td style="padding: 4px;">{HOST.NAME}</td></tr>
+      <tr><td style="padding: 4px;">&#128187; IP:</td>           <td style="padding: 4px;">{HOST.CONN}</td></tr>
+      <tr><td style="padding: 4px;">&#128221; Description:</td>  <td style="padding: 4px;">{HOST.DESCRIPTION}</td></tr>
+    </table>
+
+    <!-- Detalles del evento -->
+    <div style="background-color:LightGray; padding: 5px; margin-top: 20px;">
+      <h4 style="margin: 0;">EVENT DETAILS</h4>
+    </div>
+    <table style="width: 100%; border-collapse: collapse; margin-top: 10px; text-align: left;">
+      <tr>
+        <td style="padding: 4px;">&#128680; Event:</td>
+        <td style="padding: 4px;">
+          <a href="{$ZABBIX.URL}/tr_events.php?triggerid={TRIGGER.ID}&eventid={EVENT.ID}" style="color: #d9534f; text-decoration: none;">{EVENT.NAME}</a>
+        </td>
+      </tr>
+      <tr><td style="padding: 4px;">&#9888;&#65039; Severity:</td> <td style="padding: 4px;">{TRIGGER.SEVERITY}</td></tr>
+      <tr><td style="padding: 4px;">&#128347; Start:</td>          <td style="padding: 4px;">{EVENT.TIME} from {EVENT.DATE}</td></tr>
+      <tr><td style="padding: 4px;">&#128178; Value:</td>          <td style="padding: 4px;">{ITEM.VALUE}</td></tr>
+    </table>
+
+    <!-- Pie de página -->
+    <div style="background-color:Gray; color:white; padding: 8px; margin-top: 20px;">
+      &#9203; Zabbix Alert - {EVENT.DATE} {EVENT.TIME}
+    </div>
+
+  </div>
+
+</body>
+</html>
