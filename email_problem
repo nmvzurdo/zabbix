@@ -54,13 +54,14 @@
           <tr bgcolor="Azure">
             <td width="30%" style="font-size:14px;">&#128680; Event:</td>
             <td style="font-size:14px;">
-              <a href="{$ZABBIX.URL}/tr_events.php?triggerid={TRIGGER.ID}&eventid={EVENT.ID}"
+              <a href="http://benissa/tr_events.php?triggerid={TRIGGER.ID}&eventid={EVENT.ID}"
                  style="color:#d9534f; text-decoration:none;">{EVENT.NAME}</a>
             </td>
           </tr>
           <tr><td style="font-size:14px;">&#9888;&#65039; Severity:</td><td style="font-size:14px;">{TRIGGER.SEVERITY}</td></tr>
-          <tr bgcolor="Azure"><td style="font-size:14px;">&#128340; Start:</td><td style="font-size:14px;">{EVENT.TIME} from {EVENT.DATE}</td></tr>
+          <tr bgcolor="Azure"><td style="font-size:14px;">&#128273; Item Key:</td><td style="font-size:14px;">{ITEM.KEY}</td></tr>
           <tr><td style="font-size:14px;">&#128178; Value:</td><td style="font-size:14px;">{ITEM.VALUE}</td></tr>
+          <tr bgcolor="Azure"><td style="font-size:14px;">&#128340; Start:</td><td style="font-size:14px;">{EVENT.TIME} from {EVENT.DATE}</td></tr>
         </table>
       </td>
     </tr>
