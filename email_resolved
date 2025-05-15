@@ -20,7 +20,7 @@
             </td>
           </tr>
 
-          <tr><td height="15"></td></tr>
+          <tr><td height="15" style="line-height:15px; font-size:1px;">&nbsp;</td></tr>
 
           <!-- HOST INFORMATION -->
           <tr>
