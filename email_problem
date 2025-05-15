@@ -73,7 +73,7 @@
           style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
           <tr>
             <td height="22" align="center" valign="middle"
-              style="font-size:12px; line-height:22px; mso-line-height-rule:exactly; color:#ffffff; background-color:#808080;">
+              style="font-size:12px; line-height:22px; mso-line-height-rule:exactly; color:#ffffff; background-color:#ff6347;">
               &#9203; Zabbix Alert - {EVENT.DATE} {EVENT.TIME}
             </td>
           </tr>
