@@ -16,7 +16,7 @@
     <tr>
       <td bgcolor="#28a745" align="center" style="padding:10px 0;">
         <span style="font-size:20px; color:#ffffff; line-height:24px; mso-line-height-rule:exactly;">
-          <b>&#9989; ZABBIX EVENT RESOLVED &#9989;</b>
+          <b>&#9888;&#65039; ZABBIX EVENT RESOLVED &#9888;&#65039;</b>
         </span>
       </td>
     </tr>
@@ -60,8 +60,12 @@
             </td>
           </tr>
           <tr><td style="font-size:14px;">&#9888;&#65039; Severity:</td><td style="font-size:14px;">{TRIGGER.SEVERITY}</td></tr>
-          <tr bgcolor="Azure"><td style="font-size:14px;">&#128340; Start:</td><td style="font-size:14px;">{EVENT.TIME} from {EVENT.DATE}</td></tr>
+          <tr bgcolor="Azure"><td style="font-size:14px;">&#128273; Item Key:</td><td style="font-size:14px;">{ITEM.KEY}</td></tr>
           <tr><td style="font-size:14px;">&#128178; Value:</td><td style="font-size:14px;">{ITEM.VALUE}</td></tr>
+          <tr bgcolor="Azure"><td style="font-size:14px;">&#128338; Start:</td><td style="font-size:14px;">{EVENT.TIME} from {EVENT.DATE}</td></tr>
+          <tr bgcolor="Azure"><td style="font-size:14px;">&#128340; End:</td><td style="font-size:14px;">{EVENT.RECOVERY.TIME} from {EVENT.RECOVERY.DATE}</td></tr>
+          <tr bgcolor="Azure"><td style="font-size:14px;">&#8987; Duration:</td><td style="font-size:14px;">{EVENT.DURATION}</td></tr>
+
         </table>
       </td>
     </tr>
