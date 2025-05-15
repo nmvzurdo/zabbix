@@ -20,9 +20,7 @@
             </td>
           </tr>
 
-          <tr>
-            <td style="background-color: #ffffff; padding-top: 15px; font-size:0; line-height:0;">&nbsp;</td>
-          </tr>
+          <tr><td height="15"></td></tr>
 
           <!-- HOST INFORMATION -->
           <tr>
