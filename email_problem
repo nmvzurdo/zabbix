@@ -4,74 +4,82 @@
   <meta charset="UTF-8">
   <title>Zabbix Alert</title>
 </head>
-<body style="margin:0; padding:0; font-family:Arial, sans-serif; background-color:#ffffff;">
+<body style="margin:0; padding:0; background-color:#ffffff; font-family:Arial, sans-serif;">
 
-  <table align="center" border="0" cellpadding="0" cellspacing="0" width="700">
+  <!-- Tabla principal -->
+  <table align="center" border="0" cellpadding="0" cellspacing="0" width="700"
+    style="padding:2px 20px; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+
+    <tr><td height="10" style="font-size:0; line-height:0;">&nbsp;</td></tr>
+
+    <!-- Encabezado -->
     <tr>
-      <td style="padding:2px 20px;">
-
-        <table width="100%" cellpadding="0" cellspacing="0" border="0">
-          <tr><td height="10"></td></tr>
-
-          <!-- Encabezado -->
-          <tr>
-            <td bgcolor="#ff6347" align="center" style="padding:10px 0;">
-              <font size="5" color="#ffffff"><b>&#9888;&#65039; ZABBIX EVENT &#9888;&#65039;</b></font>
-            </td>
-          </tr>
-
-          <tr><td height="15"></td></tr>
-
-          <!-- HOST INFORMATION -->
-          <tr>
-            <td bgcolor="#d3d3d3" align="center" style="padding:2px;">
-              <font size="3"><b>HOST INFORMATION</b></font>
-            </td>
-          </tr>
-          <tr>
-            <td style="padding:10px 0;">
-              <table width="100%" cellpadding="6" cellspacing="0" border="0">
-                <tr bgcolor="Azure"><td width="30%">&#128246; Proxy:</td><td>{PROXY.NAME}</td></tr>
-                <tr><td>&#128278; Name:</td><td>{HOST.NAME}</td></tr>
-                <tr bgcolor="Azure"><td>&#128187; IP:</td><td>{HOST.CONN}</td></tr>
-                <tr><td>&#128221; Description:</td><td>{HOST.DESCRIPTION}</td></tr>
-              </table>
-            </td>
-          </tr>
-
-          <!-- EVENT DETAILS -->
-          <tr>
-            <td bgcolor="#d3d3d3" align="center" style="padding:2px;">
-              <font size="3"><b>EVENT DETAILS</b></font>
-            </td>
-          </tr>
-          <tr>
-            <td style="padding:10px 0;">
-              <table width="100%" cellpadding="6" cellspacing="0" border="0">
-                <tr bgcolor="Azure">
-                  <td width="30%">&#128680; Event:</td>
-                  <td>
-                    <a href="{$ZABBIX.URL}/tr_events.php?triggerid={TRIGGER.ID}&eventid={EVENT.ID}" style="color:#d9534f; text-decoration:none;">{EVENT.NAME}</a>
-                  </td>
-                </tr>
-                <tr><td>&#9888;&#65039; Severity:</td><td>{TRIGGER.SEVERITY}</td></tr>
-                <tr bgcolor="Azure"><td>&#128340; Start:</td><td>{EVENT.TIME} from {EVENT.DATE}</td></tr>
-                <tr><td>&#128178; Value:</td><td>{ITEM.VALUE}</td></tr>
-              </table>
-            </td>
-          </tr>
-
-          <!-- Footer -->
-          <tr>
-            <td bgcolor="#808080" align="center" style="padding:5px;">
-              <font size="2" color="#ffffff">&#9203; Zabbix Alert - {EVENT.DATE} {EVENT.TIME}</font>
-            </td>
-          </tr>
-
-        </table>
-
+      <td bgcolor="#ff6347" align="center" style="padding:10px 0;">
+        <span style="font-size:20px; color:#ffffff; line-height:24px; mso-line-height-rule:exactly;">
+          <b>&#9888;&#65039; ZABBIX EVENT &#9888;&#65039;</b>
+        </span>
       </td>
     </tr>
+
+    <tr><td height="15" style="font-size:0; line-height:0;">&nbsp;</td></tr>
+
+    <!-- HOST INFORMATION -->
+    <tr>
+      <td bgcolor="#d3d3d3" align="center" style="padding:2px; font-size:16px; line-height:18px; mso-line-height-rule:exactly;">
+        <b>HOST INFORMATION</b>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="padding:10px 0;">
+        <table width="100%" cellpadding="6" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+          <tr bgcolor="Azure"><td width="30%" style="font-size:14px;">&#128246; Proxy:</td><td style="font-size:14px;">{PROXY.NAME}</td></tr>
+          <tr><td style="font-size:14px;">&#128278; Name:</td><td style="font-size:14px;">{HOST.NAME}</td></tr>
+          <tr bgcolor="Azure"><td style="font-size:14px;">&#128187; IP:</td><td style="font-size:14px;">{HOST.CONN}</td></tr>
+          <tr><td style="font-size:14px;">&#128221; Description:</td><td style="font-size:14px;">{HOST.DESCRIPTION}</td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- EVENT DETAILS -->
+    <tr>
+      <td bgcolor="#d3d3d3" align="center" style="padding:2px; font-size:16px; line-height:18px; mso-line-height-rule:exactly;">
+        <b>EVENT DETAILS</b>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="padding:10px 0;">
+        <table width="100%" cellpadding="6" cellspacing="0" border="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+          <tr bgcolor="Azure">
+            <td width="30%" style="font-size:14px;">&#128680; Event:</td>
+            <td style="font-size:14px;">
+              <a href="{$ZABBIX.URL}/tr_events.php?triggerid={TRIGGER.ID}&eventid={EVENT.ID}"
+                 style="color:#d9534f; text-decoration:none;">{EVENT.NAME}</a>
+            </td>
+          </tr>
+          <tr><td style="font-size:14px;">&#9888;&#65039; Severity:</td><td style="font-size:14px;">{TRIGGER.SEVERITY}</td></tr>
+          <tr bgcolor="Azure"><td style="font-size:14px;">&#128340; Start:</td><td style="font-size:14px;">{EVENT.TIME} from {EVENT.DATE}</td></tr>
+          <tr><td style="font-size:14px;">&#128178; Value:</td><td style="font-size:14px;">{ITEM.VALUE}</td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- Footer -->
+    <tr>
+      <td bgcolor="#808080" align="center" style="padding:0;">
+        <table width="100%" cellpadding="0" cellspacing="0" border="0"
+          style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+          <tr>
+            <td height="22" align="center" valign="middle"
+              style="font-size:12px; line-height:22px; mso-line-height-rule:exactly; color:#ffffff; background-color:#808080;">
+              &#9203; Zabbix Alert - {EVENT.DATE} {EVENT.TIME}
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
   </table>
 
 </body>
