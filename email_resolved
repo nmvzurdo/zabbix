@@ -14,10 +14,25 @@
 
     <!-- Encabezado -->
     <tr>
-      <td bgcolor="#28a745" align="center" style="padding:10px 0;">
-        <span style="font-size:20px; color:#ffffff; line-height:24px; mso-line-height-rule:exactly;">
-          <b>&#9888;&#65039; ZABBIX EVENT RESOLVED &#9888;&#65039;</b>
-        </span>
+      <td bgcolor="#28a745" style="padding:10px 0;">
+        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <!-- Logo alineado a la izquierda con margen -->
+            <td align="left" style="padding-left:10px; width:181px;">
+              <img src="https://www.caixaenginyers.com/documents/20143/665270951/Logo-CI-web-400x76-es.png" alt="Caja de Ingenieros" width="181" height="26" style="display:block;">
+            </td>
+    
+            <!-- Título centrado -->
+            <td align="center">
+              <span style="font-size:20px; color:#ffffff; line-height:24px; mso-line-height-rule:exactly;">
+                <b>&#9888;&#65039; ZABBIX EVENT RESOLVED &#9888;&#65039;</b>
+              </span>
+            </td>
+    
+            <!-- Celda vacía de mismo ancho que el logo para balancear el centrado -->
+            <td style="width:181px;">&nbsp;</td>
+          </tr>
+        </table>
       </td>
     </tr>
 
